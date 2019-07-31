@@ -5,3 +5,42 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts 'Cleaning database...'
+Restaurant.destroy_all
+
+puts 'Creating restaurants...'
+restaurants_attributes = [
+  {
+    name:         'Dishoom',
+    address:      '7 Boundary St, London E2 7JE',
+    phone_number:  '88888888',
+    category:        "french"
+
+  },
+  {
+    name:         'Pizza East',
+    address:      '56A Shoreditch High St, London E1 6PQ',
+    phone_number:  '11111111',
+    category:        "french"
+  },
+    {
+    name:         'Express',
+    address:      '7 Boundary St, London E2 7JE',
+    phone_number:  '88888888',
+    category:        "french"
+  },
+  {
+    name:         'Dominos',
+    address:      '56A Shoreditch High St, London E1 6PQ',
+    phone_number:  '11111111',
+    category:        "french"
+  },
+  {
+    name:         'KFC',
+    address:      '7 Boundary St, London E2 7JE',
+    phone_number:  '88888888',
+    category:        "french"
+  }
+]
+Restaurant.create!(restaurants_attributes)
+puts 'Finished!'
